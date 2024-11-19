@@ -1,0 +1,127 @@
+연습문제 페이지 342 문제 19-22
+
+[19번]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+         function getZodiac(year) {
+          const zodiacs = [
+         "원숭이", "닭", "개", "돼지", "쥐", "소",
+         "호랑이", "토끼", "용", "뱀", "말", "양"
+         ];
+         return zodiacs[year % 12];
+         }
+
+         function printZodiac() {
+         const year = parseInt(prompt("태어난 연도를 입력하세요:")); // 사용자 입력받기
+         if (isNaN(year)) {
+         console.log("올바른 연도를 입력해주세요!");
+         } else {
+         const zodiac = getZodiac(year);
+         console.log(`${year}년은 '${zodiac}' 띠입니다.`);
+         }
+         }
+         </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+[20번]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>띠 출력 프로그램</title>
+</head>
+<body>
+    <script>
+        // 띠를 계산하는 함수
+        function getZodiac(year) {
+            const zodiacs = [
+                "원숭이", "닭", "개", "돼지", "쥐", "소",
+                "호랑이", "토끼", "용", "뱀", "말", "양"
+            ];
+            return zodiacs[year % 12];
+        }
+
+        // 사용자 입력받기 및 결과 출력
+        function printZodiac() {
+            const year = parseInt(prompt("태어난 연도를 입력하세요:"));
+            if (isNaN(year)) {
+                console.log("올바른 연도를 입력해주세요!");
+            } else {
+                const zodiac = getZodiac(year);
+                console.log(`${year}년은 '${zodiac}' 띠입니다.`);
+            }
+        }
+
+        // 프로그램 실행
+        printZodiac(); // 여기에 함수 호출
+    </script>
+</body>
+</html>
+
+[21번]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+      // 팩토리얼 함수
+     function factorial(n) {
+     if (n < 0) {
+        return "음수는 팩토리얼을 계산할 수 없습니다."; // 음수 처리
+     }
+     if (n === 0 || n === 1) {
+        return 1; // 0!과 1!은 1
+     }
+     let result = 1;
+     for (let i = 2; i <= n; i++) { // 2부터 n까지 곱하기
+        result *= i;
+     }
+     return result;
+     }
+
+     // 함수 테스트
+     console.log(factorial(5)); // 120
+     console.log(factorial(0)); // 1
+     console.log(factorial(-3)); // 음수는 팩토리얼을 계산할 수 없습니다.
+
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+[22번]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+        const book = {
+            이름: "C# 프로그래밍(2판)",
+            초판발행: "2021년 1월 5일",
+            지은이: "윤인성",
+            펴낸이: "전태호",
+            펴낸곳: "한빛아카데미(주)",
+            책임편집: "김성무",
+            기획: "김성무",
+            편집: "정서린",
+            디자인: ["최연희", "이아란"]
+        };
+    
+        console.log(book);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
