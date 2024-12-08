@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    /* 초기화 스타일 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* 기본 레이아웃 스타일 */
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .left {
+      background-color: #f0f0f0;
+      width: 100%;
+      display: none; /* 세로 상태에서 숨김 */
+    }
+
+    .right {
+      background-color: #ffffff;
+      width: 100%;
+      padding: 16px;
+    }
+
+    .content {
+      padding: 16px;
+    }
+
+    ul li {
+      padding: 24px 0;
+      border-bottom: 1px solid #c7c7c7;
+    }
+
+    /* 반응형 스타일 */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+
+      .left {
+        display: block;
+        width: 30%; /* 가로 상태에서 너비 30% */
+        padding: 16px;
+      }
+
+      .right {
+        width: 70%; /* 가로 상태에서 너비 70% */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left">
+      <div class="content">
+        <h1>List</h1>
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Right Section -->
+    <div class="right">
+      <div class="content">
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
