@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+        function calculateCylinderVolume(radius, height) {
+            const volume = Math.PI * Math.pow(radius, 2) * height;
+            return volume.toFixed(2);
+        }
+        const radius = parseFloat(prompt("원기둥 밑면의 반지름(cm)을 입력하세요:"));
+        const height = parseFloat(prompt("원기둥의 높이(cm)를 입력하세요:"));
+
+        if (isNaN(radius) || isNaN(height) || radius <= 0 || height <= 0) {
+        console.log("유효한 양의 숫자를 입력하세요.");
+        } else {
+        const volume = calculateCylinderVolume(radius, height);
+        console.log(`밑면 반지름이 ${radius}cm이고 높이가 ${height}cm인 원기둥의 부피는 약 ${volume}cm³입니다.`);
+        }
+</script>
+</head>
+<body>
+    
+</body>
+</html>

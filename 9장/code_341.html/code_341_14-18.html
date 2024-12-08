@@ -1,0 +1,97 @@
+연습문제 페이지 341 문제 14-18
+
+[14번]
+let i = 1;
+while (i <= 10) {
+    if (i % 5 == 0) {
+        alert(i);
+    }
+    i++;
+}
+
+[15번]
+for (let i = 10; i >= 0; i -= 3) {
+    alert(i);
+}
+
+[16번]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+         function cmToFeetAndInches(cm) {
+         const totalInches = cm / 2.54; 
+         const feet = Math.floor(totalInches / 12); 
+         const inches = (totalInches % 12).toFixed(2); 
+
+         console.log(`${cm} cm는 약 ${feet} 피트 ${inches} 인치입니다.`);
+         }
+         </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+[17번]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+        function calculateCylinderVolume(radius, height) {
+            const volume = Math.PI * Math.pow(radius, 2) * height;
+            return volume.toFixed(2);
+        }
+        const radius = parseFloat(prompt("원기둥 밑면의 반지름(cm)을 입력하세요:"));
+        const height = parseFloat(prompt("원기둥의 높이(cm)를 입력하세요:"));
+
+        if (isNaN(radius) || isNaN(height) || radius <= 0 || height <= 0) {
+        console.log("유효한 양의 숫자를 입력하세요.");
+        } else {
+        const volume = calculateCylinderVolume(radius, height);
+        console.log(`밑면 반지름이 ${radius}cm이고 높이가 ${height}cm인 원기둥의 부피는 약 ${volume}cm³입니다.`);
+        }
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+[18번]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <script>
+         function splitNumber(number) {
+         const thousands = Math.floor(number / 1000); // 천의 자리
+         const hundreds = Math.floor((number % 1000) / 100); // 백의 자리
+         const tens = Math.floor((number % 100) / 10); // 십의 자리
+         const ones = number % 10; // 일의 자리
+
+         console.log(`천의 자리: ${thousands}`);
+         console.log(`백의 자리: ${hundreds}`);
+         console.log(`십의 자리: ${tens}`);
+         console.log(`일의 자리: ${ones}`);
+         }
+         
+         const input = prompt("네 자리 정수를 입력하세요:");
+         const number = parseInt(input, 10);
+
+         if (isNaN(number) || number < 1000 || number > 9999) {
+         console.log("유효한 네 자리 정수를 입력하세요.");
+         } else {
+         splitNumber(number);
+         }
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
