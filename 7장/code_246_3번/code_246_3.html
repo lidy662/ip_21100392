@@ -1,0 +1,80 @@
+연습문제 페이지 246 문제 3
+
+(1) CSS Flexbox 레이아웃
+[Flexbox란?]
+Flexbox(Flexible Box)는 1차원 레이아웃 시스템으로, 요소를 한 줄 또는 여러 줄로 정렬하고 배치할 때 유용합니다.
+요소들이 행(row) 또는 열(column) 방향으로 배치된다.
+[주요 속성]
+1.컨테이너의 속성:
+display: flex;: Flexbox를 활성화.
+flex-direction: 요소의 정렬 방향 설정 (row, column 등).
+justify-content: 주축 방향으로 요소 정렬 (flex-start, center, space-between 등).
+align-items: 교차축 방향으로 요소 정렬 (stretch, center, flex-start 등).
+flex-wrap: 요소들이 줄 바꿈 가능 여부 설정 (nowrap, wrap).
+2.자식 요소의 속성:
+flex: 요소의 크기 비율 설정.
+align-self: 개별 요소의 교차축 정렬 방식 지정.
+[flexbox 예제]
+<div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+  
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+    }
+  </style>
+
+(2) CSS Grid 레이아웃
+[Grid란?]
+Grid는 2차원 레이아웃 시스템으로, 행(row)과 열(column)을 사용하여 요소를 배치합니다.
+더 정교한 레이아웃을 만들기 적합합니다.
+[주요 속성]
+1.컨테이너의 속성:
+display: grid;: Grid를 활성화.
+grid-template-rows 및 grid-template-columns: 행과 열의 크기 설정.
+gap: 행과 열 간격 지정.
+grid-template-areas: 레이아웃 영역 이름 설정.
+2.자식 요소의 속성:
+grid-column: 요소가 차지할 열 범위.
+grid-row: 요소가 차지할 행 범위.
+grid-area: 영역 이름에 해당하는 위치에 요소 배치.
+[Grid 예제]
+<div class="container">
+    <div class="header">Header</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+  </div>
+  
+  <style>
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar content";
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+    .header {
+      grid-area: header;
+      background-color: lightgreen;
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background-color: lightcoral;
+    }
+    .content {
+      grid-area: content;
+      background-color: lightblue;
+    }
+  </style>  
