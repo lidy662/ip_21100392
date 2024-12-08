@@ -1,0 +1,23 @@
+연습문제 페이지 376 문제 9
+
+문제점:
+DOM 요소 접근 시점 문제-
+document.getElementById를 실행하려면 DOM 요소가 로드된 이후여야 한다.
+위 코드에서는 <script>가 <body> 이전에 실행되므로, DOM 요소를 찾지 못해 오류가 발생한다.
+
+해결방법:
+1. defer 속성을 사용하는 방법: 
+<script defer>
+  let element = document.getElementById('element');
+  element.style.color = 'red';
+  element.innerHTML = 'From JavaScript';
+</script>
+
+2. DOMContentLoaded 이벤트 사용하는 방법: 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let element = document.getElementById('element');
+    element.style.color = 'red';
+    element.innerHTML = 'From JavaScript';
+  });
+</script>

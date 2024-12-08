@@ -1,0 +1,21 @@
+연습문제 페이지 374 문제 5~8
+
+[5]
+답: 1-document.getElementById()
+
+[6]
+답: 1-document.querySelector("h1")
+
+[7]
+답: 3-tag.style.background-image
+
+[8]
+답: 
+// id로 선택
+const h1ById = document.getElementById("element");
+
+// class로 선택
+const h1ByClass = document.querySelector(".header");
+
+// 태그 이름으로 선택
+const h1ByTag = document.querySelector("h1");
